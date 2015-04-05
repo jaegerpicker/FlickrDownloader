@@ -4,6 +4,7 @@ import com.flickr4java.flickr.Flickr;
 import com.flickr4java.flickr.REST;
 import com.flickr4java.flickr.Transport;
 import com.teamawesomemcpants.flickrdownloader.Main;
+import com.teamawesomemcpants.flickrdownloader.Config;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -15,6 +16,7 @@ import com.flickr4java.flickr.Flickr;
 public class MainTest
     extends TestCase
 {
+    Config cfg;
     /**
      * Create the test case
      *
@@ -23,6 +25,7 @@ public class MainTest
     public MainTest( String testName )
     {
         super( testName );
+        cfg = Config.getInstance();
     }
 
     /**
@@ -42,8 +45,10 @@ public class MainTest
     }
 
     public void testCreateFlickrObject() {
-        Flickr flickr = new Flickr("a9164cb5b240da037d071e2ab1f9ee77", "4e4a7dafc0e6f017", new REST());
+
+        Flickr flickr = new Flickr(cfg.getApiKey(), cfg.getApiSecert(), new REST());
         Main main = new Main();
         assertEquals(flickr.getApiKey(), main.getFlickr().getApiKey());
     }
+
 }

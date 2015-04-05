@@ -178,19 +178,22 @@ public class Main {
                     String filename = u.getFile();
                     filename = filename.substring(filename.lastIndexOf("/") + 1, filename.length());
                     System.out.println("Now writing " + filename + " to " + setDirectory.getCanonicalPath());
-                    BufferedInputStream inStream = new BufferedInputStream(photosInterface.getImageAsStream(p, Size.ORIGINAL));
                     File newFile = new File(setDirectory, filename);
+                    if(!newFile.exists()) {
+                        BufferedInputStream inStream = new BufferedInputStream(photosInterface.getImageAsStream(p, Size.ORIGINAL));
 
-                    FileOutputStream fos = new FileOutputStream(newFile);
 
-                    int read;
+                        FileOutputStream fos = new FileOutputStream(newFile);
 
-                    while ((read = inStream.read()) != -1) {
-                        fos.write(read);
+                        int read;
+
+                        while ((read = inStream.read()) != -1) {
+                            fos.write(read);
+                        }
+                        fos.flush();
+                        fos.close();
+                        inStream.close();
                     }
-                    fos.flush();
-                    fos.close();
-                    inStream.close();
                 } catch (Exception e) {
                     logger.error(e);
                 }

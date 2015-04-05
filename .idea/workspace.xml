@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf6e4861-f35d-4544-9634-ef6ac77cfd25" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/teamawesomemcpants/flickrdownloader/Main.java" afterPath="$PROJECT_DIR$/src/main/java/com/teamawesomemcpants/flickrdownloader/Main.java" />
-    </list>
+    <list default="true" id="cf6e4861-f35d-4544-9634-ef6ac77cfd25" name="Default" comment="" />
     <ignored path="FlickrDownloader.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -932,12 +930,12 @@
       <option name="number" value="Default" />
       <updated>1428185326682</updated>
       <workItem from="1428185331883" duration="3968000" />
-      <workItem from="1428195915070" duration="11636000" />
+      <workItem from="1428195915070" duration="12307000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15604000" />
+    <option name="totallyTimeSpent" value="16275000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="40" y="23" width="1880" height="1177" extended-state="6" />
